@@ -1,31 +1,31 @@
-package stack
+package play
 
-type Stack struct {
-	stack []interface{}
+type Play struct {
+	play []interface{}
 }
 
-func New() *Stack {
-	return &Stack{}
+func New() *Play {
+	return &Play{}
 }
 
-func (s *Stack) Push(v interface {}) {
-	s.stack = append(s.stack, v)
+func (s *Play) Push(v interface {}) {
+	s.play = append(s.play, v)
 }
 
-func (s *Stack) Pop() interface{} {}
-	if len(s.stack) == 0 {
+func (s *Play) Pop() interface{} {
+	if len(s.play) == 0 {
 		return nil
 	} else {
-		v := s.stack[len(s.stack)-1]
-		s.stack = s.stack[0 : len(s.stack) -1]
+		v := s.play[len(s.play)-1]
+		s.play = s.play[0 : len(s.play) -1]
 		return v
 	}
 }
 
-func (s *Stack) Top() interface{} {
-	if len(s.stack) == 0 {
+func (s *Play) Top() interface{} {
+	if len(s.play) == 0 {
 		return nil
 	} else {
-		return s.stack[len(s.stack]) -1]
+		return s.play[len(s.play]) -1]
 	}
 }
